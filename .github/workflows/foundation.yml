@@ -1,0 +1,29 @@
+name: Foundation
+
+on:
+  pull_request:
+    branches: [main, dev]
+  push:
+    branches: [main, dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: foundation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  foundation:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout reviewed action revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate apprenticeship foundation
+        shell: pwsh
+        run: ./scripts/Test-Foundation.ps1

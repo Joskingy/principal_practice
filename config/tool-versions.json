@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "status": "planned-pins-not-installed-or-compatibility-tested",
+  "activeMilestone": "1A",
+  "awsProfile": "brewmaster",
+  "dockerMemoryGiB": 10,
+  "tools": {
+    "terraform": "1.17.1",
+    "terraformAwsProvider": "6.71.0",
+    "dockerDesktop": "4.97.0",
+    "dockerCompose": "5.6.1",
+    "localstack": "2026.10.0",
+    "tflint": "0.65.0",
+    "tflintAwsRuleset": "0.49.0",
+    "trivy": "0.76.1",
+    "gitleaks": "8.30.1",
+    "checkovAlternative": "3.3.30",
+    "kindDeferred": "0.33.0",
+    "kubernetesUpstreamAtReview": "1.37.1",
+    "kindPublishedNodeAtReview": "1.37.0"
+  }
+}

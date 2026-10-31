@@ -1,0 +1,42 @@
+# Local reports, exercises, emulators, tools and isolated worktrees
+.lab/
+.worktrees/
+.venv/
+__pycache__/
+*.pyc
+
+# Terraform state and potentially sensitive plans; keep provider lockfiles
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+plan.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Credentials and local runtime data
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+*.pfx
+*.p12
+*.tfvars
+*.tfvars.json
+!*.example.tfvars
+!*.example.tfvars.json
+.localstack/
+*.log
+
+# Editor / OS-local files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
